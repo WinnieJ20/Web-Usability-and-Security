@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url("../img/background_blue.jpg") no-repeat center center fixed;
+	background-color: black;
+    color: rgba(0, 0, 0, 0.85);
+	background-size: cover;
+}
+
+/* customise scroll bar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* 拖动轨道 */
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+/* 拖动条 */
+::-webkit-scrollbar-thumb {
+	border-radius: 2.5px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+	background: rgba(0, 0, 0, 0.3); 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.header{
+    width: 100%;
+    position: relative;
+	margin: 0;
+}
+
+nav {
+    display: flex;
+    padding: 0.5% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 70px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    grid-column-gap: 3%;
+    grid-template-columns: 40% 57%;
+    margin: 3%;
+    margin-top: 2%;
+}
+
+.users {
+    box-shadow: 0 5px 10px rgba(79, 98, 140, 0.2);
+    display: grid;
+    grid-template-rows: min-content auto;
+    background-color: #fff;
+    height: 82vh;
+    border-radius: 10px;
+}
+
+.title {
+    box-shadow: 0 5px 10px rgba(79, 98, 140, 0.2);
+    padding: 1rem 2rem;
+    font-family: Varela Round;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.list {
+    overflow: scroll;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(79, 98, 140, 0.2);
+}
+
+input[name="username"] {
+    width: 50%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    cursor: default;
+}
+
+input[name="receiver"] {
+    width: 50%;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    cursor: default;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(79, 98, 140, 0.7);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(79, 98, 140, 1);
+}
+
+.details {
+    display: grid;
+    grid-row-gap: 3%;
+    grid-template-rows: 40% 57%;
+    background-color: transparent;
+    height: 82vh;
+}
+
+.personal_details {
+    display: grid;
+    grid-template-rows: min-content auto;
+    box-shadow: 0 5px 10px rgba(79, 98, 140, 0.2);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.no_user {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+.personal_details form {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: smaller;
+}
+
+.personal_details input[value="Modify"] {
+    border: none;
+    outline: none;
+    padding: 0px;
+    background-color: transparent;
+    color: rgb(18, 89, 156);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.personal_details input[value="Modify"]:hover {
+    border: none;
+    outline: none;
+    padding: 0px;
+    background-color: transparent;
+    color: rgba(33, 114, 190, 0.7);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.personal_details input[name="delete"] {
+    background-color: rgba(184, 0, 0);
+}
+
+.personal_details input[name="delete"]:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+input[name="password"] {
+    margin-left: 1em;
+    width: 25vw;
+    outline: none;
+    border: 1px solid rgb(79, 98, 140);
+    padding: 0.2em 0.5em;
+    border-radius: 1rem;
+    cursor: text;
+}
+
+input[name="password"]:hover {
+    background: none;
+	border: 1px solid rgba(111, 173, 231, 0.7);
+	box-shadow: 0px 0px 10px rgb(193, 225, 255);
+}
+
+input[name="password"]:focus {
+    background: rgba(193, 225, 255, 0.3);
+	border: 1px solid transparent;
+	/* box-shadow: 0px 0px 10px rgb(193, 225, 255); */
+}
+
+select {
+    margin-left: 1em;
+    width: 25vw;
+    outline: none;
+    border: 1px solid rgb(79, 98, 140);
+    padding: 0.2em 0.5em;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+select:hover {
+    background: none;
+	border: 1px solid rgba(111, 173, 231, 0.7);
+	box-shadow: 0px 0px 10px rgb(193, 225, 255);
+}
+
+.contacts {
+    display: grid;
+    grid-template-rows: min-content auto;
+    box-shadow: 0 5px 10px rgba(79, 98, 140, 0.2);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.error {
+	color: rgb(255, 0, 0);
+	font-size: smaller;
+	margin: 0px;
+    margin-left: 20px;
+	padding: 0px;
+}

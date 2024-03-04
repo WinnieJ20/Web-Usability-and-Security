@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url("../img/background2.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+.header{
+    width: 100%;
+    position: relative;
+	margin: 0;
+}
+
+nav {
+    display: flex;
+    padding: 0.5% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 70px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.box {
+	width: 270px;
+	height: 70vh;
+	padding: 70px;
+	padding-bottom: 20px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 35px;
+	background: white;
+	text-align: left;
+}
+
+.box h1 {
+	color: black;
+	font-size: 100;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.input-box {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+a {
+	color: rgb(111, 173, 231);
+}
+
+.title a {
+	margin-left: 10px;
+}
+
+a:hover {
+	color: rgb(231, 129, 111);
+}
+
+.note {
+	color: rgba(0, 0, 0, 0.6);
+	font-size: small;
+}
+
+.title .note {
+	margin-top: -10px;
+}
+
+.box ::placeholder {
+	color: rgba(0, 0, 0, 0.6);
+	font-size: smaller;
+}
+
+.box input[type="text"], .box input[type="password"] {
+	/* border: 0; */
+	width: 210px;
+	/* set backgroud colour */
+	/* background: rgba(0, 0, 0, 0.4); */
+	text-align: left;
+	/* The outlind of input box */
+	border: 2px solid rgb(231, 129, 111);
+	/* height and width of input */
+	padding: 7px 30px;
+	margin: 10px auto;
+	/* no outline colour when item is clicked */
+	outline: none;
+	/* set the text input into a white colour */
+	color: black;
+	/* add round corners to the text box */
+	border-radius: 8px;
+	/* change property values smoothly, over a given duration */
+	transition: 0.25px;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus {
+	/* width: 270px; */
+	border-color: rgba(111, 173, 231, 0.7);
+}
+
+.box input[type="text"]:hover, .box input[type="password"]:hover {
+	/* width: 270px; */
+	background: none;
+	border: 2px solid rgba(111, 173, 231, 0.7);
+	box-shadow: 0px 0px 10px rgb(193, 225, 255);
+}
+
+.output {
+	margin-top: 30px;
+}
+
+.output a {
+	margin-left: 30%;
+}
+
+.box input[type="submit"] {
+	/* font-weight: bold; */
+	background: none;
+	display: block;
+	margin: 15px auto;
+	text-align: center;
+	background: rgb(231, 129, 111);
+	border: none;
+	color: white;
+	padding: 10px 35px;
+	width: 220;
+	outline:none;
+	border-radius: 24px;
+	transition: 0.25px;
+	cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+	background: rgb(111, 173, 231);
+	color: white;
+}
+
+.error {
+	color: rgb(255, 0, 0);
+	font-size: smaller;
+	margin: 0px;
+	padding: 0px;
+}

@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url("../img/error_backgroud2.jpg") no-repeat center center fixed;
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    position: relative;
+	margin: 0;
+}
+
+nav {
+    display: flex;
+    padding: 0.5% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 70px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.box {
+	width: 60vw;
+	/* height: 20vh; */
+	padding: 50px 70px;
+	padding-bottom: 30px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 35px;
+	background: white;
+	text-align: left;
+}
+
+.box h1 {
+	color: black;
+	font-size: 100;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.box input[type="button"] {
+	background: none;
+	display: block;
+	margin: 0px auto;
+	margin-top: 25px;
+	text-align: center;
+	background: rgb(126, 64, 89);
+	border: none;
+	color: white;
+	padding: 10px 35px;
+	width: 220;
+	outline:none;
+	border-radius: 24px;
+	transition: 0.25px;
+	cursor: pointer;
+}
+
+.box input[type="button"]:hover {
+	background: rgb(255, 138, 138);
+	color: white;
+}
+
+.box a {
+	max-width: fit-content;
+	text-decoration: none;
+	cursor: default;
+}
+
+.multi_button {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.multi_button input[type="button"]{
+	display: inline-flex;
+	margin-top: 15px;
+}
